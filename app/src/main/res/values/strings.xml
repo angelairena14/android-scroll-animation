@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">cermati</string>
+    <string name="search_github_users">Search Github Users</string>
+    <string name="api_repo_url">API Repo Url</string>
+</resources>

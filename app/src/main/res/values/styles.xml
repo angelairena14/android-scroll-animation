@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#00b0ff</item>
+        <item name="colorAccent">#4b636e</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#00b0ff</item>
+        <item name="colorPrimaryDark">#00b0ff</item>
+        <item name="colorAccent">#4b636e</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/source_sans_regular</item>
+    </style>
+
+    <style name="AppTheme.TextInputOutLine" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#4b636e</item>
+        <item name="android:textColorHint">#4b636e</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">#FFFFFF</item>
+        <item name="boxCornerRadiusBottomStart">3dp</item>
+        <item name="boxCornerRadiusBottomEnd">3dp</item>
+        <item name="boxCornerRadiusTopStart">3dp</item>
+        <item name="boxCornerRadiusTopEnd">3dp</item>
+    </style>
+
+</resources>
