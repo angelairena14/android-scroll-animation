@@ -31,9 +31,6 @@ class ResearchActivity : AppCompatActivity(){
         var layoutManagerHorizontal = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         rv_indicator.layoutManager = layoutManagerHorizontal
         var adapterInd = ListIndicator()
-        adapterInd.onViewScheduleClicked = {position ->
-
-        }
         adapterInd.d = model
         rv_indicator.adapter = adapterInd
         var layoutManager = rv_research.layoutManager as LinearLayoutManager
@@ -44,7 +41,7 @@ class ResearchActivity : AppCompatActivity(){
             }
         }
 
-        adapterInd.onViewScheduleClicked = { position ->
+        adapterInd.onAdapterClicked = { position ->
             smoothScroller.targetPosition = position
             layoutManager.startSmoothScroll(smoothScroller)
             layoutManager2.scrollToPosition(position)
@@ -75,7 +72,7 @@ class ResearchActivity : AppCompatActivity(){
     inner class ListIndicator : RecyclerView.Adapter<ListUsersHolder>() {
         var d = ArrayList<ResearchModelItem>()
         var positioning = 0
-        var onViewScheduleClicked:(position : Int)->Unit = { _ -> }
+        var onAdapterClicked:(position : Int)->Unit = { _ -> }
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListUsersHolder {
             return ListUsersHolder(
                 LayoutInflater.from(parent.context)
@@ -112,7 +109,7 @@ class ResearchActivity : AppCompatActivity(){
                 }
             }
             holder.itemView.setOnClickListener {
-                onViewScheduleClicked(position)
+                onAdapterClicked(position)
             }
         }
     }
